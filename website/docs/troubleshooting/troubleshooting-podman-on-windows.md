@@ -78,3 +78,22 @@ Older versions of WSL might cause networking issues, such as the `Get-NetTCPConn
    ```
 
 3. Optionally, delete your Podman machine, and create a new one.
+
+## WSL version should be >= 1.2.5
+
+This indicates that podman desktop needs WSL2 to function which is not yet upgraded on your system. It is there, but not the upgrade onebut has not been upgraded to a higher version as required.
+
+1. Check WSL version
+```shell-session
+wsl -l -v
+```
+
+2. Update WSL
+```shell-session
+wsl --update
+```
+
+3. Also set the default WSL version
+```shell-session
+wsl --set-default-version 2
+```
